@@ -20,9 +20,27 @@ namespace WPF1
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Apps a = new Apps();
+            a.Name = name.Text;
+            a.Address = address.Text;
+            string zipAsString = zip.Text;
+            a.ZipCode = Convert.ToInt32(zipAsString);
+            listbox.Items.Add(a);
+
+           
         }
     }
 }

@@ -7,6 +7,22 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="0"/>
+                <GradientStop Color="#FFF9F7F7" Offset="0.191"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Label x:Name="namelabel" Content="Name:" HorizontalAlignment="Left" Margin="34,71,0,0" VerticalAlignment="Top" Height="41" Width="74" FontSize="20"/>
+        <Label x:Name="addresslabel" Content="Address: " HorizontalAlignment="Left" Margin="34,153,0,0" VerticalAlignment="Top" Height="37" Width="96" FontSize="20"/>
+        <Label x:Name="ziplabel" Content="Zip Code:" HorizontalAlignment="Left" Margin="34,244,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <TextBox x:Name="name" HorizontalAlignment="Left" Height="23" Margin="161,71,0,0" TextWrapping="Wrap" Text="&#xD;&#xA;" VerticalAlignment="Top" Width="170"/>
+        <TextBox x:Name="address" HorizontalAlignment="Left" Height="23" Margin="161,157,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" RenderTransformOrigin="0.559,-0.525" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="zip" HorizontalAlignment="Left" Height="23" Margin="161,244,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170"/>
+        <Label Content="Application" HorizontalAlignment="Left" Margin="34,10,0,0" VerticalAlignment="Top" FontSize="24" FontFamily="Magneto"/>
+        <Button Content="APPLY" HorizontalAlignment="Left" Margin="161,328,0,0" VerticalAlignment="Top" Width="115" Height="34" FontSize="20" FontWeight="Bold" Background="#FFACD1F0" Click="Button_Click"/>
+        <ListBox x:Name="listbox" HorizontalAlignment="Left" Height="291" VerticalAlignment="Top" Width="296" Margin="463,71,0,0"/>
+        <Label Content="Submitted Applications" HorizontalAlignment="Left" Margin="444,15,0,0" VerticalAlignment="Top" FontFamily="Magneto" FontSize="20" Width="293"/>
+
     </Grid>
 </Window>
